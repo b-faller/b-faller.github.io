@@ -1,0 +1,108 @@
+/* Global variables. */
+:root {
+  /* https://huemint.com/website-3/#palette=14161a-4054c5-f0e9eb-00a6e7-a5256b-ea1440 */
+  --bg: #14161a;
+  --accent-bg: hsl(220deg 13% 7%);
+  --light-bg: hsl(220deg 13% 15%);
+  --text: #f0e9eb;
+  --text-light: #14161a;
+  --text-muted: #b9bfd2;
+  --border: #15222e;
+  --accent: #00a6e7;
+  --attention: #ea1440;
+  --highlight: #0fb6a2;
+  --code: #0fb6a2;
+  --preformatted: var(--text-muted);
+  --marked: #0fb6a2;
+  --disabled: #f0e9eb;
+}
+
+html {
+  font-family: var(--mono-font);
+}
+
+img,
+video {
+  opacity: 1.0;
+}
+
+header>nav a,
+header>nav a:visited {
+  background-color: inherit;
+  border: none;
+  border-bottom: 4px solid var(--attention);
+  border-radius: 0px;
+}
+
+header>nav a:hover {
+  border-color: var(--attention);
+  background-color: var(--attention);
+  color: var(--text-light);
+}
+
+/* Reduce nav side on mobile */
+@media only screen and (max-width: 720px) {
+
+  header>nav a,
+  header>nav a:visited {
+    background-color: inherit;
+    line-height: inherit;
+    padding: inherit;
+    text-decoration: inherit;
+    border: none;
+    border-bottom: 4px solid var(--attention);
+    border-radius: 0;
+    padding-top: 0;
+  }
+}
+
+body>header h1 {
+  background: linear-gradient(45deg, hsla(348, 84%, 50%, 1) 20%, hsla(276, 64%, 49%, 1) 50%, hsla(204, 100%, 45%, 1) 80%);
+  background: -moz-linear-gradient(45deg, hsla(348, 84%, 50%, 1) 20%, hsla(276, 64%, 49%, 1) 50%, hsla(204, 100%, 45%, 1) 80%);
+  background: -webkit-linear-gradient(45deg, hsla(348, 84%, 50%, 1) 20%, hsla(276, 64%, 49%, 1) 50%, hsla(204, 100%, 45%, 1) 80%);
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body>header p {
+  color: var(--text-muted);
+}
+
+body>footer {
+  color: var(--text);
+}
+
+article {
+  all: inherit;
+}
+
+code {
+  background-color: var(--light-bg);
+  border: none;
+  border-radius: 5px;
+  padding: 0.1rem;
+}
+
+/* Custom elements */
+.badge-container {
+  text-align: center;
+}
+
+.badge {
+  max-width: 100px;
+}
+
+/* Icon besides external link */
+main a[href^='http']:after {
+  content: '';
+  display: inline-block;
+  width: .65em;
+  height: .65em;
+  margin-left: 0.25em;
+  background-size: 100%;
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='1em' viewBox='0 0 512 512'%3E%3C!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --%3E%3Cstyle%3Esvg%7Bfill:%23f0e9eb%7D%3C/style%3E%3Cpath d='M352 0c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9L370.7 96 201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L416 141.3l41.4 41.4c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6V32c0-17.7-14.3-32-32-32H352zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z'/%3E%3C/svg%3E");
+}

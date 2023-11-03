@@ -1,0 +1,6 @@
+content_path = "."
+output_path = "_site"
+
+[site_info]
+title = "pwned.info"
+description = "Personal website of Benjamin Faller"
