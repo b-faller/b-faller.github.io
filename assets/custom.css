@@ -94,6 +94,12 @@ code {
   max-width: 100px;
 }
 
+.badge-bg {
+  max-width: 100px;
+  padding: 5px;
+  background-color: white;
+}
+
 /* Icon besides external link */
 main a[href^='http']:after {
   content: '';
