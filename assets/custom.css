@@ -68,6 +68,9 @@ body>header h1 {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
+  /* Make more space for all letters */
+  padding: 0.5rem 0;
 }
 
 body>header p {
@@ -87,6 +90,13 @@ code {
   border: none;
   border-radius: 5px;
   padding: 0.1rem;
+}
+
+blockquote {
+  margin: 0;
+  padding: 0 0.8rem;
+  border-left: 0.35rem solid var(--marked);
+  color: var(--preformatted);
 }
 
 /* Custom elements */
