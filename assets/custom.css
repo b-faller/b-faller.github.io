@@ -102,6 +102,21 @@ blockquote {
 }
 
 /* Custom elements */
+.footnote-definition {
+  margin: 0.5em 0;
+  padding-left: 1.5em;
+  position: relative;
+}
+
+.footnote-definition-label {
+  position: absolute;
+  left: 0;
+}
+
+.footnote-definition p {
+  margin: 0;
+}
+
 .badge-container {
   text-align: center;
 }
