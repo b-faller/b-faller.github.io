@@ -39,9 +39,9 @@ header>nav a:visited {
 }
 
 header>nav a:hover {
+  color: var(--text-light) !important;
   border-color: var(--attention);
   background-color: var(--attention);
-  color: var(--text-light);
 }
 
 /* Reduce nav side on mobile */
