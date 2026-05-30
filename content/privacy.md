@@ -1,6 +1,7 @@
 +++
 id = "privacy-policy"
 title = "Privacy Policy"
+description = "This is the privacy policy for pwned.info."
 hide = true
 +++
 
