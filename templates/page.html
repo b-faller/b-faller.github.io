@@ -2,14 +2,12 @@
 <html lang="en">
 
 <head>
-  {% include "head.html" %}
+  {% include "includes/head.html" %}
 </head>
 
 <body>
   <header>
-    <nav>
-      {{ nav }}
-    </nav>
+    {% include "includes/nav.html" %}
     <h1>{{ title }}</h1>
   </header>
 
@@ -18,7 +16,7 @@
   </main>
 
   <footer>
-    {% include "footer.html" %}
+    {% include "includes/footer.html" %}
   </footer>
 </body>
 

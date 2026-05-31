@@ -2,23 +2,31 @@
 <html lang="en">
 
 <head>
-  {% include "head.html" %}
+  {% include "includes/head.html" %}
 </head>
 
 <body>
   <header>
-    <nav>
-      {{ nav }}
-    </nav>
+    {% include "includes/nav.html" %}
     <h1>{{ title }}</h1>
   </header>
 
   <main>
-    {{ articles }}
+    {% for page in pages %}
+    {% if page.date %}
+    {% if page.excerpt %}
+    <hgroup>
+      <h3><a href="{{ page.url }}">{{ page.title }}</a></h3>
+      <p><small><time datetime="{{ page.date_iso8601 }}">{{ page.date }}</time></small></p>
+      <p>{{ page.excerpt }}</p>
+    </hgroup>
+    {% endif %}
+    {% endif %}
+    {% endfor %}
   </main>
 
   <footer>
-    {% include "footer.html" %}
+    {% include "includes/footer.html" %}
   </footer>
 </body>
 

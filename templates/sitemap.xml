@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    {% for index in indices %}
+    <url><loc>{{ index.url }}</loc></url>
+    {% for page in index.pages %}
+    <url><loc>{{ page.url }}</loc></url>
+    {% endfor %}
+    {% endfor %}
+</urlset>
