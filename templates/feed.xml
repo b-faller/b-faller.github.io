@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>{{ feed_title }}</title>
+    <link>{{ site_base_url }}</link>
+    <description>{{ feed_description }}</description>
+    <language>en</language>
+    <atom:link href="{{ site_base_url }}/feed.xml" rel="self" type="application/rss+xml"/>
+    <lastBuildDate>{{ feed_updated_rfc822 }}</lastBuildDate>
+    {% for item in feed_items %}
+    <item>
+      <title>{{ item.title }}</title>
+      <link>{{ item.url }}</link>
+      <guid isPermaLink="true">{{ item.url }}</guid>
+      <pubDate>{{ item.date_rfc822 }}</pubDate>
+      {% if item.author %}
+      <dc:creator>{{ item.author }}</dc:creator>
+      {% endif %}
+      {% if item.description %}
+      <description>{{ item.description }}</description>
+      {% endif %}
+      <content:encoded>{{ item.content }}</content:encoded>
+    </item>
+    {% endfor %}
+  </channel>
+</rss>

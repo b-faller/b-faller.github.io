@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ feed_title }}</title>
+  <subtitle>{{ feed_description }}</subtitle>
+  <link href="{{ site_base_url }}/atom.xml" rel="self"/>
+  <link href="{{ site_base_url }}"/>
+  <id>{{ site_base_url }}/</id>
+  <updated>{{ feed_updated }}</updated>
+  <author><name>{{ feed_title }}</name></author>
+  {% for item in feed_items %}
+  <entry>
+    <title>{{ item.title }}</title>
+    <link href="{{ item.url }}"/>
+    <id>{{ item.url }}</id>
+    <updated>{{ item.date_rfc3339 }}</updated>
+    <published>{{ item.date_rfc3339 }}</published>
+    {% if item.author %}
+    <author><name>{{ item.author }}</name></author>
+    {% endif %}
+    {% if item.description %}
+    <summary type="html">{{ item.description }}</summary>
+    {% endif %}
+    <content type="html">{{ item.content }}</content>
+  </entry>
+  {% endfor %}
+</feed>
