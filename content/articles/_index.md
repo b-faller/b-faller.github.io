@@ -6,6 +6,7 @@ description = "Articles about disassembling security, one exploit at a time."
 display_in_nav = 1
 sort_by = "date"
 template = "articles.html"
+schema = "Blog"
 +++
 
 Nothing there yet.

@@ -3,6 +3,7 @@ id = "whoami"
 title = "whoami"
 display_in_nav = 0
 sort_by = "title"
+schema = "WebSite"
 +++
 
 Hello, I'm Benjamin.

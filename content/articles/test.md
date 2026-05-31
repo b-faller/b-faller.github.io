@@ -3,8 +3,10 @@ id = "test"
 title = "Test Article"
 excerpt = "Article test content."
 date = "2022-02-15T16:00:00+01:00"
+author = "+_+"
 draft = true
 template = "post.html"
+schema = "BlogPosting"
 +++
 
 Let's go!
