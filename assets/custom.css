@@ -69,6 +69,10 @@ body>header h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
+  /* Fit to the text so the gradient spans the title instead of the full header */
+  width: fit-content;
+  margin-inline: auto;
+
   /* Make more space for all letters */
   padding: 0.5rem 0;
 }
