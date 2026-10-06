@@ -12,6 +12,9 @@
       <h1>{{ title }}</h1>
       <p>{{ description }}</p>
       <time datetime="{{ date_iso8601 }}"><mark>{{ date }}</mark></time>
+      {% if updated %}
+      <p><small>Updated <time datetime="{{ updated_iso8601 }}">{{ updated }}</time></small></p>
+      {% endif %}
     </hgroup>
   </header>
 

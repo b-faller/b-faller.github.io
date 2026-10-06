@@ -18,7 +18,7 @@
     {% if page.excerpt %}
     <hgroup>
       <h3><a href="{{ page.url }}">{{ page.title }}</a></h3>
-      <p><small><time datetime="{{ page.date_iso8601 }}">{{ page.date }}</time></small></p>
+      <p><small><time datetime="{{ page.date_iso8601 }}">{{ page.date }}</time>{% if page.updated %} &middot; Updated <time datetime="{{ page.updated_iso8601 }}">{{ page.updated }}</time>{% endif %}</small></p>
       <p>{{ page.excerpt }}</p>
     </hgroup>
     {% endif %}

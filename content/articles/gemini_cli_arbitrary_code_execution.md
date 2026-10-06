@@ -4,6 +4,7 @@ title = "Homing in on Arbitrary Code Execution within Gemini CLI"
 description = "Since we already discovered a high-severity arbitrary code execution in Anthropic's Claude Code, I couldn't stop myself wondering whether a similar vulnerability exists in Gemini CLI. It does."
 excerpt = "Three months ago, I found the time to try out Gemini CLI, an agentic coding chatbot just like Claude Code. Since we already discovered a high-severity arbitrary code execution in Anthropic's Claude Code which I wrote about here before, I couldn't stop myself wondering whether a similar vulnerability exists in Gemini CLI. It does."
 date = "2026-06-04T08:54:45+02:00"
+updated = "2026-10-06T08:29:12+02:00"
 author = "+_+"
 template = "post.html"
 schema = "BlogPosting"
@@ -16,11 +17,9 @@ Since we already discovered a high-severity arbitrary code execution in Anthropi
 
 It does.
 
-In short: _this vulnerability allowed attackers, who can trick a victim to start Gemini CLI prior to version 0.39.0 within an untrusted directory, to gain arbitrary code execution.
+In short: _this vulnerability allowed attackers, who can trick a victim to start Gemini CLI prior to version 0.39.1 within an untrusted directory, to gain arbitrary code execution.
 User interaction, such as acceptance of the startup trust dialog, was not necessary.
-Although Google has not officially confirmed the patch, this issue appears to be resolved in version 0.39.0._
-
-At the time of writing, this vulnerability is not tracked publicly as Google declined to issue a CVE.
+This issue was resolved in version 0.39.1._
 
 A proof of concept is published on GitHub.[^2]
 
@@ -145,8 +144,16 @@ This bounty will be donated once it is paid out by them.
 - **2026-04-16**: Google declined CVE assignment on the basis that it does not meet "specific criteria required for publication."
 - **2026-05-01**: We asked Google to reconsider due to the high impact and Google's commitment to vulnerability transparency.
 - **2026-05-05**: Google declined CVE assignment on the basis that the internally assigned severity (S2) "does not satisfy the required threshold."
-- **2026-05-11** to Present: We initiated a CVE Record Dispute process with MITRE. This process is still ongoing.
+- **2026-05-11**: We initiated a CVE Record Dispute process with MITRE.
+- **2026-06-03**: MITRE initiated the CVE Program Policy and Procedure for Disputing a CVE Record with the Google CNA.
 - **2026-06-04**: Publication of this article.
+- **2026-06-10**: Google acknowledged they "are investigating this internally".
+- **2026-06-12**: Google confirmed via Google Bughunters that a CVE will be issued.
+- **2026-06-29**: Google reserved CVE-2026-13745.
+- **2026-09-10**: CVE published by Google. We noticed the publication and that the CVE contained errors, such as referring to unrelated vulnerabilities identified by other security researchers, noting wrong software components, and a critical vulnerability rating.
+- **2026-09-18**: We asked MITRE and Google CNA to update the CVE with corrected information provided by us.
+- **2026-09-23**: Google adjusted the CVE as requested.
+- **2026-10-05**: Update of this article.
 
 ## Footnotes
 
